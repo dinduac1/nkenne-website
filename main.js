@@ -323,6 +323,50 @@
         }, 2200);
     }
 
+    // ---- Blog archive: category filter + pagination ----
+    const blogFilterBar = document.getElementById('blogFilter');
+    const blogGrid = document.getElementById('blogGrid');
+    const blogPagination = document.getElementById('blogPagination');
+    if (blogFilterBar && blogGrid) {
+        const PAGE_SIZE = 6;
+        const blogCards = Array.from(blogGrid.querySelectorAll('.blog-card'));
+        let activeCategory = 'all';
+        let activePage = 1;
+
+        function renderBlog() {
+            const filtered = blogCards.filter(c => activeCategory === 'all' || c.dataset.category === activeCategory);
+            const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+            if (activePage > totalPages) activePage = 1;
+            blogCards.forEach(c => { c.hidden = true; });
+            filtered.forEach((c, i) => {
+                if (Math.floor(i / PAGE_SIZE) + 1 === activePage) c.hidden = false;
+            });
+            if (blogPagination) {
+                blogPagination.innerHTML = '';
+                if (totalPages > 1) {
+                    for (let p = 1; p <= totalPages; p++) {
+                        const btn = document.createElement('button');
+                        btn.className = 'blog-page-btn' + (p === activePage ? ' active' : '');
+                        btn.type = 'button';
+                        btn.textContent = String(p);
+                        btn.addEventListener('click', () => { activePage = p; renderBlog(); });
+                        blogPagination.appendChild(btn);
+                    }
+                }
+            }
+        }
+        blogFilterBar.querySelectorAll('.blog-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                blogFilterBar.querySelectorAll('.blog-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeCategory = btn.dataset.filter;
+                activePage = 1;
+                renderBlog();
+            });
+        });
+        renderBlog();
+    }
+
     // ---- Find Your Language quiz ----
     const LANG_DATA = {
         igbo: { name: 'Igbo', phrase: 'Ndewo', meaning: '"Hello" in Igbo', copy: 'The tongue of the Nri Kingdom and Achebe’s proverbs, carrying market wisdom and ancestral memory, still spoken by millions.' },
