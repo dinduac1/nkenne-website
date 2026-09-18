@@ -2,7 +2,7 @@
   "name": "NKENNE",
   "short_name": "NKENNE",
   "description": "Learn 16 African languages with NKENNE. Your first lesson is free.",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0D2B22",
   "theme_color": "#0D2B22",

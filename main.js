@@ -120,12 +120,12 @@
         const ua = navigator.userAgent || '';
         const isIOS = /iPhone|iPad|iPod/i.test(ua);
         const isAndroid = /Android/i.test(ua);
-        const onDownloadPage = /download\.html$/.test(location.pathname);
+        const onDownloadPage = /\/download$/.test(location.pathname);
 
         if (stickyBtn) {
             if (isIOS) stickyBtn.href = IOS_URL;
             else if (isAndroid) stickyBtn.href = ANDROID_URL;
-            else stickyBtn.href = onDownloadPage ? '#storeBadges' : 'download.html#storeBadges';
+            else stickyBtn.href = onDownloadPage ? '#storeBadges' : 'download#storeBadges';
             stickyBtn.addEventListener('click', () => trackEvent('sticky_cta_click', { page: location.pathname }));
         }
 
