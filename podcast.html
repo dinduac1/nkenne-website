@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Podcast: NKENNE</title>
-    <meta name="description" content="Essays on African and diaspora culture, language, food, and music, new almost every day. Plus the NKENNE Podcast, hosted by Anosike Progress and Ijeoma Blossom Nwokolo.">
-    <meta property="og:title" content="Blog & Podcast: NKENNE">
-    <meta property="og:description" content="Stories from the continent, daily. Read the blog, listen to the podcast.">
+    <title>The NKENNE Podcast: Meet the Hosts | NKENNE</title>
+    <meta name="description" content="The NKENNE Podcast, hosted by Anosike Progress and Ijeoma Blossom Nwokolo. Weekly conversations on language, identity, and the diaspora experience.">
+    <meta property="og:title" content="The NKENNE Podcast | NKENNE">
+    <meta property="og:description" content="Weekly conversations on language, identity, and home, hosted by Progress and Blossom.">
     <meta property="og:image" content="assets/nkenne-icon.png">
     <meta property="og:type" content="website">
     <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -15,7 +15,23 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#0D2B22">
-    <link rel="canonical" href="https://nkenne.com/blog">
+    <link rel="canonical" href="https://nkenne.com/podcast">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PodcastSeries",
+        "name": "The NKENNE Podcast",
+        "description": "Weekly conversations on language, identity, and the diaspora experience.",
+        "url": "https://nkenne.com/podcast",
+        "image": "https://nkenne.com/assets/nkenne-icon.png",
+        "publisher": { "@type": "Organization", "name": "NKENNE", "url": "https://nkenne.com/" },
+        "webFeed": "https://nkenne.com/podcast",
+        "author": [
+            { "@type": "Person", "name": "Anosike Progress" },
+            { "@type": "Person", "name": "Ijeoma Blossom Nwokolo" }
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,13 +39,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <style>
-        .podcast-panel { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        @media (max-width: 900px) { .podcast-panel { grid-template-columns: 1fr; gap: 2.5rem; } }
-        .podcast-art { aspect-ratio: 1/1; max-width: 340px; background: var(--jungle); position: relative; overflow: hidden; margin: 0 auto; }
-        .podcast-art::before { content: ''; position: absolute; inset: 0; background: linear-gradient(150deg, var(--jungle) 0%, var(--jungle-dark) 100%); }
-        .podcast-art i, .podcast-art svg { position: relative; width: 72px; height: 72px; color: var(--gold); top: 50%; left: 50%; transform: translate(-50%, -50%); position: absolute; }
-    </style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
@@ -61,62 +70,61 @@
     <main id="main">
     <section class="page-hero">
         <div class="container page-hero-inner">
-            <span class="eyebrow on-dark flanked page-eyebrow">Blog &amp; Podcast</span>
-            <h1>Stories from the <em>continent, daily.</em></h1>
-            <p class="lede">Essays on the culture, history, food, and music behind every language NKENNE teaches, written for people who want more than vocabulary. New, almost every day.</p>
-        </div>
-    </section>
-
-    <section class="pad-lg bg-cream on-cream">
-        <div class="container">
-            <div class="blog-filter" id="blogFilter">
-                <button class="blog-filter-btn active" data-filter="all">All posts</button>
-                <button class="blog-filter-btn" data-filter="culture-history">Culture &amp; History</button>
-                <button class="blog-filter-btn" data-filter="language">Language Learning</button>
-                <button class="blog-filter-btn" data-filter="food">Food &amp; Recipes</button>
-            </div>
-            <div class="card-grid grid-3" id="blogGrid">
-                <a href="blog/the-bangala-people-founders-of-lingala" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 15, 2026</span><h3 class="serif">The Bangala People: Warriors, Traders, and the True Founders of Lingala</h3><span class="bc-read">Read the story<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/humor-and-sarcasm-in-burkinabe-french" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 14, 2026</span><h3 class="serif">Humor and Sarcasm in Burkinabé French: The Art of Saying "C'est pas grave, on va gérer"</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/bira-shona-ceremony" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 13, 2026</span><h3 class="serif">Bira: The All-Night Shona Ceremony of Ancestors, Music, and Memory</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/tilahun-gessesse-ethiopian-music" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 12, 2026</span><h3 class="serif">Tilahun Gessesse: The Voice That Soundtracked Modern Ethiopia</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/early-history-of-nigerian-pidgin" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 11, 2026</span><h3 class="serif">From Portuguese "Sabi" to British Trade: The Hidden Early History of Nigerian Pidgin</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="blog/family-members-and-relationships-in-twi" class="blog-card reveal" data-category="language"><div class="blog-card-body"><span class="bc-cat">Language Learning</span><span class="bc-date">September 10, 2026</span><h3 class="serif">Family Members and Relationships in Twi</h3><span class="bc-read">Read the story<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/cape-verdean-funana" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 8, 2026</span><h3 class="serif">Funaná: Cape Verde's Rebel Rhythm That Defied Colonial Bans</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/the-battle-of-isandlwana" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 7, 2026</span><h3 class="serif">The Battle of Isandlwana: A Defining Moment of Zulu Resistance</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="blog/miyan-gyada-groundnut-soup" class="blog-card reveal" data-category="food"><div class="blog-card-body"><span class="bc-cat">Food &amp; Recipes</span><span class="bc-date">September 6, 2026</span><h3 class="serif">Miyan Gyada: The Groundnut Soup That Turns Peanuts Into a Full Meal</h3><span class="bc-read">Read the story<i data-lucide="arrow-right"></i></span></div></a>
-                <a href="https://nkenne.com/blog/ozo-title-taking-igbo-culture" target="_blank" rel="noopener" class="blog-card reveal" data-category="culture-history"><div class="blog-card-body"><span class="bc-cat">Culture &amp; History</span><span class="bc-date">September 5, 2026</span><h3 class="serif">Ozo Title-Taking: What It Meant to Earn Status in Igbo Communities</h3><span class="bc-read">Read on nkenne.com<i data-lucide="arrow-right"></i></span></div></a>
-            </div>
-            <div class="blog-pagination" id="blogPagination"></div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://nkenne.com/blog" target="_blank" rel="noopener" class="btn btn-outline-dark">Read the full archive on nkenne.com<i data-lucide="arrow-right"></i></a>
+            <span class="eyebrow on-dark flanked page-eyebrow">The NKENNE Podcast</span>
+            <h1>Conversations on language, <em>identity, and home.</em></h1>
+            <p class="lede">Hosted by Progress and Blossom, the NKENNE Podcast is a weekly sit-down on what it means to carry a culture you didn't get to grow up inside of, and what it takes to claim it back. It's the kind of conversation you'd have with someone who's been exactly where you are.</p>
+            <div class="btn-group" style="margin-top: 2.5rem;">
+                <a href="#hosts" class="btn btn-gold">Meet the hosts<i data-lucide="arrow-right"></i></a>
+                <a href="blog" class="btn btn-outline-light">Read the blog</a>
             </div>
         </div>
     </section>
 
-    <section class="pad-lg bg-jungle on-dark">
+    <section class="pad-lg bg-white on-white" id="hosts">
         <div class="container">
-            <div class="podcast-panel">
-                <div class="podcast-art reveal"><i data-lucide="radio"></i></div>
-                <div>
-                    <span class="eyebrow on-dark flanked">The NKENNE Podcast</span>
-                    <h2 class="serif" style="font-size: clamp(2.2rem, 4vw, 3.25rem); font-weight: 400; margin-bottom: 1.5rem; color: #fff;">Conversations on language, <em>identity, and home.</em></h2>
-                    <p style="color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.85; margin-bottom: 2rem;">Hosted by Progress and Blossom, the NKENNE Podcast covers African culture and language every week. It's the kind of conversation you'd have with someone who's been exactly where you are, meant to leave you feeling a little more like yourself.</p>
-                    <div class="btn-group">
-                        <a href="podcast" class="btn btn-gold">Listen now<i data-lucide="arrow-right"></i></a>
-                        <a href="podcast#hosts" class="btn btn-outline-light">Meet the hosts</a>
-                    </div>
+            <div class="section-head">
+                <span class="eyebrow on-white flanked center">Meet Your Hosts</span>
+                <h2 class="serif">Two voices, <em>one table.</em></h2>
+            </div>
+            <div class="podcast-hosts">
+                <div class="podcast-host-card reveal">
+                    <div class="podcast-host-avatar">AP</div>
+                    <h3 class="podcast-host-name">Anosike Progress</h3>
+                    <span class="podcast-host-role">Co-Host, The NKENNE Podcast &middot; goes by Progress</span>
+                    <p class="podcast-host-bio">Progress co-hosts the NKENNE Podcast, bringing listeners into weekly conversations on language, identity, and what it means to hold onto home from a distance.</p>
+                </div>
+                <div class="podcast-host-card reveal">
+                    <div class="podcast-host-avatar">IN</div>
+                    <h3 class="podcast-host-name">Ijeoma Blossom Nwokolo</h3>
+                    <span class="podcast-host-role">Co-Host, The NKENNE Podcast &middot; goes by Blossom</span>
+                    <p class="podcast-host-bio">Blossom co-hosts the NKENNE Podcast, exploring the diaspora experience one conversation at a time, from the words we lose to the ones we fight to keep.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-band bg-white on-white">
-        <div class="container" style="max-width: 720px;">
-            <h2 class="serif">Reading about it is a start. <em>Speaking it is the point.</em></h2>
-            <p>Every story on the blog connects back to a language you can actually learn. Start your first free lesson today.</p>
+    <section class="pad-lg bg-cream on-cream">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow on-cream flanked center">What We Talk About</span>
+                <h2 class="serif">Every episode, <em>a little closer to home.</em></h2>
+            </div>
+            <div class="card-grid grid-3">
+                <div class="feature-card reveal"><div class="fc-icon"><i data-lucide="languages"></i></div><h3 class="fc-title serif">Language &amp; identity</h3><p class="fc-desc">What it means to speak, half-speak, or have lost the language your grandparents dreamed in, and what it takes to get it back.</p></div>
+                <div class="feature-card reveal"><div class="fc-icon"><i data-lucide="globe"></i></div><h3 class="fc-title serif">The diaspora experience</h3><p class="fc-desc">Stories from people building a life abroad while keeping a foot planted at home, the joys, the guilt, the in-between.</p></div>
+                <div class="feature-card reveal"><div class="fc-icon"><i data-lucide="mic"></i></div><h3 class="fc-title serif">Real conversations</h3><p class="fc-desc">No scripts, no polish, just two hosts and their guests talking honestly about culture, family, and belonging.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-band bg-jungle on-dark">
+        <div class="container" style="max-width: 760px;">
+            <div class="cta-band-icon"><img src="assets/nkenne-icon.png" alt=""></div>
+            <h2 class="serif">New episodes, <em>every week.</em></h2>
+            <p>Start your first 3 lessons free on NKENNE while you wait for the next drop.</p>
             <div class="btn-group center">
-                <a href="download" class="btn btn-jungle">Start free<i data-lucide="arrow-right"></i></a>
+                <a href="download" class="btn btn-gold">Get the app<i data-lucide="arrow-right"></i></a>
+                <a href="blog" class="btn btn-outline-light">Explore the blog</a>
             </div>
         </div>
     </section>

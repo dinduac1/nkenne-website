@@ -289,6 +289,15 @@ nav.site-nav.is-solid .menu-btn span { background: var(--ink); }
 
 .quote-card { background: #fff; border: 1px solid rgba(16,36,29,0.08); padding: 2.5rem; }
 .quote-card p.qtext { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; line-height: 1.65; color: var(--ink); margin-bottom: 1.5rem; }
+
+/* ---------- Podcast host profiles ---------- */
+.podcast-hosts { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem; }
+@media (max-width: 780px) { .podcast-hosts { grid-template-columns: 1fr; gap: 3rem; } }
+.podcast-host-card { text-align: center; }
+.podcast-host-avatar { width: 140px; height: 140px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--jungle-deep); font-size: 2.75rem; margin: 0 auto 1.75rem; }
+.podcast-host-name { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; margin-bottom: 0.35rem; }
+.podcast-host-role { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 1.25rem; display: block; }
+.podcast-host-bio { line-height: 1.85; opacity: 0.8; font-size: 0.98rem; }
 .quote-card .qauthor { font-size: 0.85rem; color: var(--jungle); font-weight: 600; }
 .quote-card .qmeta { font-size: 0.8rem; color: #6b7a72; }
 
